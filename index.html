@@ -8,6 +8,7 @@
 <meta name="robots" content="noindex,nofollow">
 <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
 <link rel="preload" href="fonts/public-sans-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/barlow-condensed-600.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="css/site.css">
 <script>document.documentElement.classList.add('js')</script>
 </head>
@@ -21,7 +22,7 @@
 </div>
 <header class="kopf">
   <div class="wrap kopf-innen">
-    <a class="marke" href="#inhalt" aria-label="Hewing und Tschirner, zur Startseite">Hewing &amp; Tschirner<small>Rechtsanwälte und Notarin</small></a>
+    <a class="marke" href="#inhalt" aria-label="Hewing und Tschirner, Rechtsanwälte und Notarin, zur Startseite">Hewing · Tschirner<small>Rechtsanwälte &amp; Notarin</small></a>
     <button type="button" class="menu-knopf" aria-expanded="false" aria-controls="hauptmenue">Menü</button>
     <nav class="nav" id="hauptmenue" aria-label="Hauptmenü">
       <ul>
@@ -57,31 +58,25 @@
 <main id="inhalt" tabindex="-1">
 
 <section class="start" aria-labelledby="start-h">
-  <div class="wrap">
-    <div class="start-raster">
-      <div>
-        <p class="ueber">Notariat in Ochtrup seit 1949</p>
-        <h1 id="start-h"><span>Die Notarin steht zwischen den Beteiligten.</span> <span class="zweiter">Die Anwälte stehen an Ihrer Seite.</span></h1>
-        <p class="satz">Beides unter einem Dach an der Gronauer Straße. Sagen Sie uns, worum es geht, wir sagen Ihnen, wer zuständig ist.</p>
-        <div class="knoepfe">
-          <a class="knopf" href="#notarin">Notartermin vorbereiten <span class="pfeil" aria-hidden="true">→</span></a>
-          <a class="knopf zweit" href="#anwaelte">Anwaltliche Hilfe</a>
-        </div>
-      </div>
-      <div class="bogen"><img src="img/praegung.webp" alt="" width="900" height="900"></div>
-    </div>
-    <div class="start-fakten">
-      <div><b>Notarin</b><span>Alexandra Hewing</span></div>
-      <div><b>Rechtsanwälte</b><span>Alexandra Hewing, Alfred Tschirner</span></div>
-      <div><b>Termine</b><span>nach Vereinbarung, <a href="tel:+49255372230">02553 72230</a></span></div>
-    </div>
+  <picture>
+    <source media="(max-width: 700px)" srcset="img/luftbild-hoch.webp" width="1080" height="1500">
+    <img class="start-bild" src="img/luftbild-breit.webp" width="2400" height="1300" alt="Luftbild: das Haus Gronauer Straße 24 in Ochtrup, zwischen alten Bäumen an der Gronauer Straße, weiß umrandet und beschriftet.">
+  </picture>
+  <div class="wrap start-text">
+    <h1 id="start-h">Ochtrups ältestes Notariat liegt an der Gronauer Straße.</h1>
   </div>
+  <nav class="start-wege" aria-label="Ihr Anliegen">
+    <div class="wrap">
+      <a href="#notarin"><small>Die Notarin, neutral für alle Beteiligten</small>Notartermin vorbereiten <span aria-hidden="true">→</span></a>
+      <a href="#anwaelte"><small>Die Anwälte, an Ihrer Seite</small>Anwaltliche Hilfe <span aria-hidden="true">→</span></a>
+    </div>
+  </nav>
+  <p class="bildquelle">Luftbild: Geobasis NRW, Datenlizenz Deutschland Zero 2.0</p>
 </section>
 
 <section class="abschnitt" id="notarin" aria-labelledby="notarin-h">
   <div class="wrap">
     <div class="kopfzeile" data-zeigen>
-      <p class="ueber">Die Notarin</p>
       <h2 id="notarin-h">Gut vorbereitet zum Notartermin</h2>
       <p class="leise">Die Notarin berät alle Beteiligten neutral. Wählen Sie Ihren Anlass: Sie sehen den Ablauf und was Sie mitbringen, und können die Liste ausdrucken.</p>
     </div>
@@ -159,7 +154,6 @@
 <section class="abschnitt grau" id="anwaelte" aria-labelledby="rg-h">
   <div class="wrap">
     <div class="kopfzeile" data-zeigen>
-      <p class="ueber">Die Anwälte</p>
       <h2 id="rg-h">An Ihrer Seite, außergerichtlich und vor Gericht</h2>
       <p class="leise">Für Privatpersonen und Unternehmer.</p>
     </div>
@@ -192,7 +186,6 @@
 <section class="abschnitt" id="kanzlei" aria-labelledby="ka-h">
   <div class="wrap">
     <div class="kopfzeile" data-zeigen>
-      <p class="ueber">Die Kanzlei</p>
       <h2 id="ka-h">Wer Ihnen gegenübersitzt</h2>
     </div>
     <div class="personen">
@@ -231,7 +224,6 @@
 <section class="abschnitt dunkel" aria-labelledby="af-h">
   <div class="wrap">
     <div class="kopfzeile" data-zeigen>
-      <p class="ueber">Die Amtsfolge</p>
       <h2 id="af-h">Fünf Notare seit 1949</h2>
       <p class="leise">Das Notariat ist das älteste in Ochtrup und heute in der fünften Generation für Sie da.</p>
     </div>
@@ -248,7 +240,6 @@
 <section class="abschnitt" id="formulare" aria-labelledby="fo-h">
   <div class="wrap zwei-spalten">
     <div data-zeigen>
-      <p class="ueber">Formulare</p>
       <h2 id="fo-h">Zum Ausfüllen und Mitbringen</h2>
       <ul class="formulare" style="margin-top:1.3rem">
         <li><a href="datenblatt.html"><b>Daten für den Kaufvertrag</b><small>Online eingeben, für Haus, Wohnung oder Grundstück</small></a></li>
@@ -259,7 +250,6 @@
       </ul>
     </div>
     <div data-zeigen>
-      <p class="ueber">Häufige Fragen</p>
       <h2 id="ko-h">Kosten und Hilfe</h2>
       <div class="fragen" style="margin-top:1.3rem">
         <details>
@@ -286,7 +276,6 @@
 <section class="abschnitt grau" id="kontakt" aria-labelledby="ko2-h">
   <div class="wrap kontakt-raster">
     <div class="kontakt-daten" data-zeigen>
-      <p class="ueber">Kontakt</p>
       <h2 id="ko2-h">So erreichen Sie uns</h2>
       <a class="tel-gross" href="tel:+49255372230">02553 72230</a>
       <p class="status" data-status></p>
@@ -324,7 +313,7 @@
   <div class="wrap">
     <div class="fuss-raster">
       <div>
-        <a class="marke" href="index.html">Hewing &amp; Tschirner</a>
+        <a class="marke" href="index.html">Hewing · Tschirner<small>Rechtsanwälte &amp; Notarin</small></a>
         <p>Rechtsanwälte und Notarin<br>Gronauer Straße 24, 48607 Ochtrup</p>
       </div>
       <ul>
