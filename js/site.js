@@ -204,7 +204,11 @@
   }
   function status() {
     var l = lage();
-    $$('[data-status]').forEach(function (e) { e.textContent = l.text; });
+    $$('[data-status]').forEach(function (e) {
+      e.textContent = l.text;
+      var w = e.closest('[data-offen]');
+      if (w) w.setAttribute('data-offen', l.offen ? 'ja' : 'nein');
+    });
     $$('[data-tag]').forEach(function (z) {
       var t = z.getAttribute('data-tag').split(',').indexOf(String(l.tag)) > -1;
       z.classList.toggle('heute', t);

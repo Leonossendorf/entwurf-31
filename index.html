@@ -7,26 +7,32 @@
 <meta name="description" content="Unverbindlicher Website-Entwurf für Hewing und Tschirner, Rechtsanwälte und Notarin, Gronauer Straße 24 in Ochtrup.">
 <meta name="robots" content="noindex,nofollow">
 <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
-<link rel="preload" href="fonts/eb-garamond-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/public-sans-var.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="css/site.css">
 <script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
 <a class="skip" href="#inhalt">Zum Inhalt springen</a>
+<div class="kopfband" role="region" aria-label="Erreichbarkeit">
+  <div class="wrap">
+    <p class="ort">Rechtsanwälte und Notarin, Gronauer Straße 24, Ochtrup</p>
+    <p data-offen="nein"><span class="status-punkt" aria-hidden="true"></span><span data-status>Telefon</span> · <a href="tel:+49255372230">02553 72230</a></p>
+  </div>
+</div>
 <header class="kopf">
   <div class="wrap kopf-innen">
-    <a class="marke" href="#inhalt" aria-label="Hewing und Tschirner, zur Startseite">Hewing <i>&amp;</i> Tschirner</a>
+    <a class="marke" href="#inhalt" aria-label="Hewing und Tschirner, zur Startseite">Hewing &amp; Tschirner<small>Rechtsanwälte und Notarin</small></a>
     <button type="button" class="menu-knopf" aria-expanded="false" aria-controls="hauptmenue">Menü</button>
     <nav class="nav" id="hauptmenue" aria-label="Hauptmenü">
       <ul>
-        <li><a href="#termin">Notartermin</a></li>
-        <li><a href="#rechtsgebiete">Rechtsgebiete</a></li>
+        <li><a href="#notarin">Notarin</a></li>
+        <li><a href="#anwaelte">Anwälte</a></li>
         <li><a href="#kanzlei">Kanzlei</a></li>
+        <li><a href="#formulare">Formulare</a></li>
         <li><a href="#kontakt">Kontakt</a></li>
       </ul>
     </nav>
-    <a class="kopf-kontakt" href="tel:+49255372230"><strong>02553 72230</strong><span data-status></span></a>
-    <button type="button" class="hilfe-knopf" aria-expanded="false" aria-controls="lesehilfen" aria-label="Barrierefreiheit: Lesehilfen öffnen"><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><circle cx="12" cy="4.2" r="2.1"/><path d="M3.6 7.3c-.5-.1-1 .2-1.1.7s.2 1 .7 1.1c2.2.6 4.3 1 6.2 1.1v3.3L7.6 21c-.1.5.2 1 .7 1.1.5.1 1-.2 1.1-.7l1.8-6.6h1.6l1.8 6.6c.1.5.6.8 1.1.7.5-.1.8-.6.7-1.1l-1.8-7.5v-3.3c1.9-.1 4-.5 6.2-1.1.5-.1.8-.6.7-1.1s-.6-.8-1.1-.7c-5.8 1.6-10.6 1.6-16.8 0z"/></svg><span class="wort klein">Lesehilfen</span></button>
+    <button type="button" class="hilfe-knopf" aria-expanded="false" aria-controls="lesehilfen" aria-label="Barrierefreiheit: Lesehilfen öffnen"><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><circle cx="12" cy="4.2" r="2.1"/><path d="M3.6 7.3c-.5-.1-1 .2-1.1.7s.2 1 .7 1.1c2.2.6 4.3 1 6.2 1.1v3.3L7.6 21c-.1.5.2 1 .7 1.1.5.1 1-.2 1.1-.7l1.8-6.6h1.6l1.8 6.6c.1.5.6.8 1.1.7.5-.1.8-.6.7-1.1l-1.8-7.5v-3.3c1.9-.1 4-.5 6.2-1.1.5-.1.8-.6.7-1.1s-.6-.8-1.1-.7c-5.8 1.6-10.6 1.6-16.8 0z"/></svg><span class="wort">Lesehilfen</span></button>
   </div>
   <div class="hilfe-panel" id="lesehilfen" hidden>
     <h2>Lesehilfen</h2>
@@ -50,43 +56,34 @@
 </header>
 <main id="inhalt" tabindex="-1">
 
-<section aria-labelledby="start-h">
-  <div class="wrap hero-kopf">
-    <h1 id="start-h">Rechtsanwälte und Notarin in Ochtrup</h1>
-    <p>Notariat seit 1949, Gronauer Straße 24</p>
-  </div>
-  <div class="tueren">
-    <div class="tuer tuer-notarin">
-      <h2><span class="rolle">Die Notarin</span> <span>steht neutral zwischen den Beteiligten.</span></h2>
-      <ul class="wege">
-        <li><a href="#termin" data-merkblatt="haus">Haus oder Grundstück<small>Kaufvertrag beurkunden</small></a></li>
-        <li><a href="#termin" data-merkblatt="testament">Testament oder Erbvertrag<small>Nachlass regeln</small></a></li>
-        <li><a href="#termin" data-merkblatt="vorsorge">Vorsorgevollmacht<small>Betreuungs- und Patientenverfügung</small></a></li>
-        <li><a href="#termin" data-merkblatt="erbschein">Erbschein oder Ausschlagung<small>nach einem Todesfall</small></a></li>
-      </ul>
+<section class="start" aria-labelledby="start-h">
+  <div class="wrap">
+    <div class="start-raster">
+      <div>
+        <p class="ueber">Notariat in Ochtrup seit 1949</p>
+        <h1 id="start-h"><span>Die Notarin steht zwischen den Beteiligten.</span> <span class="zweiter">Die Anwälte stehen an Ihrer Seite.</span></h1>
+        <p class="satz">Beides unter einem Dach an der Gronauer Straße. Sagen Sie uns, worum es geht, wir sagen Ihnen, wer zuständig ist.</p>
+        <div class="knoepfe">
+          <a class="knopf" href="#notarin">Notartermin vorbereiten <span class="pfeil" aria-hidden="true">→</span></a>
+          <a class="knopf zweit" href="#anwaelte">Anwaltliche Hilfe</a>
+        </div>
+      </div>
+      <div class="bogen"><img src="img/praegung.webp" alt="" width="900" height="900"></div>
     </div>
-    <div class="tuer tuer-anwaelte">
-      <img class="praegung" src="img/praegung.webp" alt="" width="640" height="640">
-      <h2><span class="rolle">Die Anwälte</span> <span>stehen an Ihrer Seite.</span></h2>
-      <ul class="wege">
-        <li><a href="#g-familie">Trennung und Scheidung<small>Unterhalt, Sorgerecht, Zugewinn</small></a></li>
-        <li><a href="#g-erbrecht">Streit ums Erbe<small>Erbansprüche, Pflichtteil</small></a></li>
-        <li><a href="#g-arbeit">Kündigung oder Abmahnung<small>Arbeitsrecht</small></a></li>
-        <li><a href="#g-verkehr">Unfall oder Bußgeld<small>Verkehrsrecht</small></a></li>
-      </ul>
+    <div class="start-fakten">
+      <div><b>Notarin</b><span>Alexandra Hewing</span></div>
+      <div><b>Rechtsanwälte</b><span>Alexandra Hewing, Alfred Tschirner</span></div>
+      <div><b>Termine</b><span>nach Vereinbarung, <a href="tel:+49255372230">02553 72230</a></span></div>
     </div>
-  </div>
-  <div class="wrap hero-fuss">
-    <p>Beides zugleich geht in derselben Angelegenheit in der Regel nicht (§&nbsp;3 Abs.&nbsp;1 Beurkundungsgesetz). Deshalb fragen wir zu Beginn, worum es geht und wer beteiligt ist.</p>
   </div>
 </section>
 
-<section class="abschnitt" id="termin" aria-labelledby="termin-h" style="padding-top:clamp(2.2rem,4vw,3.4rem)">
+<section class="abschnitt" id="notarin" aria-labelledby="notarin-h">
   <div class="wrap">
     <div class="kopfzeile" data-zeigen>
-      <p class="ueber">Notartermin</p>
-      <h2 id="termin-h">Gut vorbereitet zur Notarin</h2>
-      <p class="leise">Wählen Sie Ihren Anlass. Sie sehen den Ablauf und was Sie mitbringen, und können die Liste ausdrucken.</p>
+      <p class="ueber">Die Notarin</p>
+      <h2 id="notarin-h">Gut vorbereitet zum Notartermin</h2>
+      <p class="leise">Die Notarin berät alle Beteiligten neutral. Wählen Sie Ihren Anlass: Sie sehen den Ablauf und was Sie mitbringen, und können die Liste ausdrucken.</p>
     </div>
     <div class="termin" data-zeigen>
       <div class="reiter" role="tablist" aria-label="Anlass wählen" aria-orientation="vertical"><button type="button" role="tab" id="tab-haus" data-blatt="haus" aria-controls="blatt-haus" aria-selected="true">Haus oder Grundstück<small>Kaufvertrag</small></button><button type="button" role="tab" id="tab-testament" data-blatt="testament" aria-controls="blatt-testament" aria-selected="false">Testament oder Erbvertrag<small>Nachlass regeln</small></button><button type="button" role="tab" id="tab-vorsorge" data-blatt="vorsorge" aria-controls="blatt-vorsorge" aria-selected="false">Vorsorgevollmacht<small>auch Betreuungs- und Patientenverfügung</small></button><button type="button" role="tab" id="tab-erbschein" data-blatt="erbschein" aria-controls="blatt-erbschein" aria-selected="false">Erbschein oder Ausschlagung<small>nach einem Todesfall</small></button></div>
@@ -95,12 +92,13 @@
       <h3>Haus oder Grundstück</h3>
       <p class="leise">Ein Grundstückskaufvertrag muss notariell beurkundet werden (§ 311b BGB). Die Notarin erklärt allen Beteiligten denselben Vertrag.</p>
       <div class="blatt-teil">
-        <div><h4>So läuft es</h4><ol class="schritte"><li><span><b>Eckdaten melden</b> Käufer oder Verkäufer nennen uns Objekt, Kaufpreis und Beteiligte.</span></li><li><span><b>Entwurf lesen</b> Sie erhalten den Vertragstext vorab, als Verbraucher in der Regel zwei Wochen vor dem Termin.</span></li><li><span><b>Beurkundung</b> Die Notarin liest den Vertrag vor und erläutert ihn. Fragen klären Sie direkt am Tisch.</span></li><li><span><b>Vollzug</b> Die Notarin kümmert sich um das Grundbuch und teilt mit, wann der Kaufpreis fällig ist.</span></li></ol></div>
-        <div><h4>Das bringen Sie mit</h4><ul class="haken"><li><label><input type="checkbox"><span>Personalausweis oder Reisepass</span></label></li><li><label><input type="checkbox"><span>Steuer-Identifikationsnummer aller Beteiligten</span></label></li><li><label><input type="checkbox"><span>Kaufpreis und geplanter Übergabetermin</span></label></li><li><label><input type="checkbox"><span>Grundbuchblatt oder Flurstück, falls zur Hand</span></label></li><li><label><input type="checkbox"><span>Bankverbindung des Verkäufers</span></label></li><li><label><input type="checkbox"><span>Bei Finanzierung: Name der Bank</span></label></li></ul></div>
+        <div><h4>So läuft es</h4><ol class="schritte"><li><span><b>Daten senden</b> Käufer oder Verkäufer geben uns die Eckdaten, am einfachsten online.</span></li><li><span><b>Entwurf lesen</b> Sie erhalten den Vertragstext vorab, als Verbraucher in der Regel zwei Wochen vor dem Termin.</span></li><li><span><b>Beurkundung</b> Die Notarin liest den Vertrag vor und erläutert ihn. Fragen klären Sie direkt am Tisch.</span></li><li><span><b>Vollzug</b> Die Notarin kümmert sich um das Grundbuch und teilt mit, wann der Kaufpreis fällig ist.</span></li></ol></div>
+        <div><h4>Das bringen Sie mit</h4><ul class="haken"><li><label><input type="checkbox"><span>Personalausweis oder Reisepass</span></label></li><li><label><input type="checkbox"><span>Steuer-Identifikationsnummer aller Beteiligten</span></label></li><li><label><input type="checkbox"><span>Familienstand und, falls verheiratet, Güterstand</span></label></li><li><label><input type="checkbox"><span>Kaufpreis, geplanter Übergabetermin und mitverkaufte Dinge, etwa die Küche</span></label></li><li><label><input type="checkbox"><span>Grundbuchblatt oder Flurstück, falls zur Hand</span></label></li><li><label><input type="checkbox"><span>Bestehende Grundschulden oder Darlehen auf dem Objekt</span></label></li><li><label><input type="checkbox"><span>Bankverbindung des Verkäufers</span></label></li><li><label><input type="checkbox"><span>Bei Finanzierung: Name der Bank</span></label></li></ul></div>
       </div>
-      <div class="gut"><p class="leise">Zweiwochenfrist: § 17 Abs. 2a Beurkundungsgesetz.</p></div>
+      <div class="gut"><p class="leise">Zweiwochenfrist: § 17 Abs. 2a Beurkundungsgesetz.</p><p class="leise">Kauft oder verkauft eine Firma? Dann brauchen wir zusätzlich einen aktuellen Registerauszug.</p></div>
       <div class="blatt-knoepfe">
-        <a class="knopf" href="#kontakt" data-wahl="haus">Termin anfragen</a>
+        <a class="knopf" href="datenblatt.html">Daten online eingeben <span class="pfeil" aria-hidden="true">→</span></a>
+        <a class="knopf zweit" href="#kontakt" data-wahl="haus">Termin anfragen</a>
         <button type="button" class="knopf zweit" data-drucken>Liste drucken</button>
       </div>
     </div>
@@ -114,6 +112,7 @@
       </div>
       <div class="gut"><p class="leise">Verwahrung: § 34 Beurkundungsgesetz.</p><p class="leise">Ein notarielles Testament kann beim Grundbuchamt den Erbschein ersetzen (§ 35 Abs. 1 Grundbuchordnung).</p></div>
       <div class="blatt-knoepfe">
+        
         <a class="knopf" href="#kontakt" data-wahl="testament">Termin anfragen</a>
         <button type="button" class="knopf zweit" data-drucken>Liste drucken</button>
       </div>
@@ -128,6 +127,7 @@
       </div>
       <div class="gut"><p class="leise">Sie können nicht in die Kanzlei kommen? Sagen Sie es uns bei der Terminabsprache.</p></div>
       <div class="blatt-knoepfe">
+        
         <a class="knopf" href="#kontakt" data-wahl="vorsorge">Termin anfragen</a>
         <button type="button" class="knopf zweit" data-drucken>Liste drucken</button>
       </div>
@@ -142,29 +142,36 @@
       </div>
       
       <div class="blatt-knoepfe">
+        
         <a class="knopf" href="#kontakt" data-wahl="erbschein">Termin anfragen</a>
         <button type="button" class="knopf zweit" data-drucken>Liste drucken</button>
       </div>
     </div></div>
     </div>
+    <div class="weitere" data-zeigen>
+      <h3>Außerdem</h3>
+      <ul><li>Schenkung oder Übertragung</li><li>Ehevertrag</li><li>Unterschrift beglaubigen</li><li>Firma gründen, Registeranmeldung</li></ul>
+      <a href="#kontakt" data-wahl="notar-sonst">Dazu anfragen</a>
+    </div>
   </div>
 </section>
 
-<section class="abschnitt" id="rechtsgebiete" aria-labelledby="rg-h" style="padding-top:0">
+<section class="abschnitt grau" id="anwaelte" aria-labelledby="rg-h">
   <div class="wrap">
     <div class="kopfzeile" data-zeigen>
-      <p class="ueber">Anwaltliche Vertretung</p>
-      <h2 id="rg-h">Rechtsgebiete</h2>
-      <p class="leise">Wir beraten Privatpersonen und Unternehmer, außergerichtlich und vor Gericht.</p>
+      <p class="ueber">Die Anwälte</p>
+      <h2 id="rg-h">An Ihrer Seite, außergerichtlich und vor Gericht</h2>
+      <p class="leise">Für Privatpersonen und Unternehmer.</p>
     </div>
     <div class="gebiete-raster">
-      <ul class="gebiete" data-zeigen><li id="g-familie"><h3>Familienrecht</h3><p>Scheidung, Unterhalt, Sorge- und Umgangsrecht, Zugewinn</p><a href="#kontakt" data-wahl="familie">Dazu anfragen</a></li>
-<li id="g-erbrecht"><h3>Erbrecht</h3><p>Gestaltung von Testamenten, Erbansprüche, Pflichtteilsansprüche</p><a href="#kontakt" data-wahl="erbrecht">Dazu anfragen</a></li>
+      <ul class="gebiete" data-zeigen><li id="g-familie"><h3>Familienrecht</h3><p>Trennung und Scheidung, Unterhalt, Sorge- und Umgangsrecht, Zugewinn</p><a href="#kontakt" data-wahl="familie">Dazu anfragen</a></li>
+<li id="g-erbrecht"><h3>Erbrecht</h3><p>Erbansprüche, Pflichtteil, Gestaltung von Testamenten</p><a href="#kontakt" data-wahl="erbrecht">Dazu anfragen</a></li>
+<li id="g-verkehr"><h3>Verkehrsrecht</h3><p>Verkehrsunfall, Bußgeld und Ordnungswidrigkeiten</p><a href="#kontakt" data-wahl="verkehr">Dazu anfragen</a></li>
 <li id="g-arbeit"><h3>Arbeitsrecht</h3><p>Kündigung und Kündigungsschutz, Abmahnung, Vergütung, Arbeitsverträge</p><a href="#kontakt" data-wahl="arbeit">Dazu anfragen</a></li>
-<li id="g-verkehr"><h3>Verkehrsrecht</h3><p>Verkehrsunfälle, Ordnungswidrigkeiten</p><a href="#kontakt" data-wahl="verkehr">Dazu anfragen</a></li>
 <li id="g-miete"><h3>Mietrecht</h3><p>Mietvertrag, Betriebskosten, Wohnungseigentum</p><a href="#kontakt" data-wahl="miete">Dazu anfragen</a></li>
-<li id="g-schaden"><h3>Schadensersatz</h3><p>Haftpflichtversicherung, Kaufvertrag, Forderungseinzug</p><a href="#kontakt" data-wahl="schaden">Dazu anfragen</a></li>
-<li id="g-weitere"><h3>Weitere Gebiete</h3><p>Strafrecht, Vertragsrecht, privates Baurecht, Internetrecht</p><a href="#kontakt" data-wahl="weitere">Dazu anfragen</a></li></ul>
+<li id="g-schaden"><h3>Schadensersatz</h3><p>Haftpflichtversicherung, Kaufvertrag</p><a href="#kontakt" data-wahl="schaden">Dazu anfragen</a></li>
+<li id="g-unternehmen"><h3>Für Unternehmer</h3><p>Verträge prüfen und gestalten, offene Forderungen einziehen</p><a href="#kontakt" data-wahl="unternehmen">Dazu anfragen</a></li>
+<li id="g-weitere"><h3>Weitere Gebiete</h3><p>Strafrecht, privates Baurecht, Internetrecht</p><a href="#kontakt" data-wahl="weitere">Dazu anfragen</a></li></ul>
       <div class="fristen" data-zeigen>
         <h3 id="f-h">Wenn Post gekommen ist</h3>
         <p>Diese Fristen sind kurz. Melden Sie sich früh.</p>
@@ -176,10 +183,13 @@
         </ul>
       </div>
     </div>
+    <div class="hinweis-zeile" data-zeigen>
+      <p>Notarin und Anwalt zugleich geht in derselben Angelegenheit in der Regel nicht (§&nbsp;3 Abs.&nbsp;1 Beurkundungsgesetz). Deshalb fragen wir zu Beginn, worum es geht und wer beteiligt ist.</p>
+    </div>
   </div>
 </section>
 
-<section class="abschnitt" id="kanzlei" aria-labelledby="ka-h" style="padding-top:0">
+<section class="abschnitt" id="kanzlei" aria-labelledby="ka-h">
   <div class="wrap">
     <div class="kopfzeile" data-zeigen>
       <p class="ueber">Die Kanzlei</p>
@@ -208,6 +218,13 @@
         </dl>
       </article>
     </div>
+    <div class="mitarbeit" data-zeigen>
+      <div>
+        <h3>Mitarbeit in der Kanzlei</h3>
+        <p>Rechtsanwalts- und Notarfachangestellte, Ausbildung zur Fachangestellten oder zum Fachangestellten: Schreiben Sie uns, ein paar Sätze genügen.</p>
+      </div>
+      <a class="knopf zweit" href="#kontakt" data-wahl="bewerbung">Kurz bewerben</a>
+    </div>
   </div>
 </section>
 
@@ -215,7 +232,7 @@
   <div class="wrap">
     <div class="kopfzeile" data-zeigen>
       <p class="ueber">Die Amtsfolge</p>
-      <h2 id="af-h">Fünf Namen seit 1949</h2>
+      <h2 id="af-h">Fünf Notare seit 1949</h2>
       <p class="leise">Das Notariat ist das älteste in Ochtrup und heute in der fünften Generation für Sie da.</p>
     </div>
     <ol class="folge" data-zeigen>
@@ -228,39 +245,45 @@
   </div>
 </section>
 
-<section class="abschnitt" id="kosten" aria-labelledby="ko-h">
-  <div class="wrap eng">
-    <div class="kopfzeile" data-zeigen>
+<section class="abschnitt" id="formulare" aria-labelledby="fo-h">
+  <div class="wrap zwei-spalten">
+    <div data-zeigen>
+      <p class="ueber">Formulare</p>
+      <h2 id="fo-h">Zum Ausfüllen und Mitbringen</h2>
+      <ul class="formulare" style="margin-top:1.3rem">
+        <li><a href="datenblatt.html"><b>Daten für den Kaufvertrag</b><small>Online eingeben, für Haus, Wohnung oder Grundstück</small></a></li>
+        <li><a href="https://www.justiz.de/service/formular/dateien/agI1.pdf"><b>Antrag auf Beratungshilfe</b><small>PDF, Justizportal des Bundes und der Länder</small></a></li>
+        <li><a href="https://service.justiz.de/prozesskostenhilfe/formular-ausfuellen"><b>Prozesskostenhilfe online ausfüllen</b><small>Justizportal, Schritt für Schritt</small></a></li>
+        <li><a href="https://www.justiz.de/service/formular/dateien/zp1a.pdf"><b>Erklärung zur Prozesskostenhilfe</b><small>PDF zum Ausdrucken, Justizportal</small></a></li>
+        <li><a href="#notarin"><b>Merkblätter zum Notartermin</b><small>Ablauf und Unterlagen, zum Ausdrucken</small></a></li>
+      </ul>
+    </div>
+    <div data-zeigen>
       <p class="ueber">Häufige Fragen</p>
       <h2 id="ko-h">Kosten und Hilfe</h2>
-    </div>
-    <div class="fragen" data-zeigen>
-      <details>
-        <summary>Was kostet die Notarin?</summary>
-        <div class="antwort"><p>Die Gebühren sind gesetzlich festgelegt und richten sich nach dem Wert der Sache. Sie gelten für alle Notare in Deutschland gleich, Vereinbarungen über die Höhe sind unwirksam (§&nbsp;125 Gerichts- und Notarkostengesetz). Vor dem Termin nennen wir Ihnen gern den voraussichtlichen Betrag.</p></div>
-      </details>
-      <details>
-        <summary>Was kostet das erste Gespräch beim Anwalt?</summary>
-        <div class="antwort"><p>Für Verbraucher höchstens 190 Euro zuzüglich Umsatzsteuer, wenn nichts anderes vereinbart ist (§&nbsp;34 Rechtsanwaltsvergütungsgesetz). Die Höhe sprechen wir vorab mit Ihnen ab.</p></div>
-      </details>
-      <details>
-        <summary>Was, wenn das Geld knapp ist?</summary>
-        <div class="antwort">
-          <p>Bei geringem Einkommen gibt es Beratungshilfe. Der Eigenanteil beträgt 15 Euro, er kann erlassen werden. Für ein Gerichtsverfahren gibt es Prozess- oder Verfahrenskostenhilfe.</p>
-          <p><a href="https://www.justiz.de/service/formular/dateien/agI1.pdf">Antrag auf Beratungshilfe (PDF, Justizportal)</a><br>
-          <a href="https://service.justiz.de/prozesskostenhilfe/formular-ausfuellen">Prozesskostenhilfe online ausfüllen (Justizportal)</a><br>
-          <a href="https://www.justiz.de/service/formular/dateien/zp1a.pdf">Erklärung zur Prozesskostenhilfe (PDF, Justizportal)</a></p>
-        </div>
-      </details>
-      <details>
-        <summary>Notarin oder Anwalt, was brauche ich?</summary>
-        <div class="antwort"><p>Soll etwas beurkundet werden, etwa ein Grundstückskauf, ist die Notarin zuständig. Sie berät alle Beteiligten neutral. Geht es um Ihre eigenen Interessen gegenüber einer anderen Seite, vertritt Sie ein Anwalt. Am Telefon klären wir in wenigen Minuten, was für Sie passt.</p></div>
-      </details>
+      <div class="fragen" style="margin-top:1.3rem">
+        <details>
+          <summary>Was kostet die Notarin?</summary>
+          <div class="antwort"><p>Die Gebühren sind gesetzlich festgelegt und richten sich nach dem Wert der Sache. Sie gelten für alle Notare in Deutschland gleich, Vereinbarungen über die Höhe sind unwirksam (§&nbsp;125 Gerichts- und Notarkostengesetz). Vor dem Termin nennen wir Ihnen gern den voraussichtlichen Betrag.</p></div>
+        </details>
+        <details>
+          <summary>Was kostet das erste Gespräch beim Anwalt?</summary>
+          <div class="antwort"><p>Für Verbraucher höchstens 190 Euro zuzüglich Umsatzsteuer, wenn nichts anderes vereinbart ist (§&nbsp;34 Rechtsanwaltsvergütungsgesetz). Die Höhe sprechen wir vorab mit Ihnen ab.</p></div>
+        </details>
+        <details>
+          <summary>Was, wenn das Geld knapp ist?</summary>
+          <div class="antwort"><p>Bei geringem Einkommen gibt es Beratungshilfe. Der Eigenanteil beträgt 15 Euro, er kann erlassen werden. Für ein Gerichtsverfahren gibt es Prozess- oder Verfahrenskostenhilfe. Die Formulare finden Sie links.</p></div>
+        </details>
+        <details>
+          <summary>Notarin oder Anwalt, was brauche ich?</summary>
+          <div class="antwort"><p>Soll etwas beurkundet werden, etwa ein Grundstückskauf, ist die Notarin zuständig. Sie berät alle Beteiligten neutral. Geht es um Ihre eigenen Interessen gegenüber einer anderen Seite, vertritt Sie ein Anwalt. Am Telefon klären wir in wenigen Minuten, was für Sie passt.</p></div>
+        </details>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="abschnitt kontakt-teil" id="kontakt" aria-labelledby="ko2-h">
+<section class="abschnitt grau" id="kontakt" aria-labelledby="ko2-h">
   <div class="wrap kontakt-raster">
     <div class="kontakt-daten" data-zeigen>
       <p class="ueber">Kontakt</p>
@@ -279,9 +302,9 @@
     <form class="formular" data-demo novalidate data-zeigen>
       <h3>Rückruf oder Termin anfragen</h3>
       <fieldset>
-        <legend>Worum geht es? <small class="leise" style="font-weight:400">(Angabe optional)</small></legend>
+        <legend>Worum geht es? <small class="leise" style="font-weight:500">(Angabe optional)</small></legend>
         <span class="gruppe-name">Notarin</span><div class="chips"><label><input type="radio" name="anliegen" value="haus"><span>Haus oder Grundstück</span></label><label><input type="radio" name="anliegen" value="testament"><span>Testament, Erbvertrag</span></label><label><input type="radio" name="anliegen" value="vorsorge"><span>Vorsorge</span></label><label><input type="radio" name="anliegen" value="erbschein"><span>Erbschein, Ausschlagung</span></label><label><input type="radio" name="anliegen" value="notar-sonst"><span>Andere Beurkundung</span></label></div>
-        <span class="gruppe-name">Anwälte</span><div class="chips"><label><input type="radio" name="anliegen" value="familie"><span>Familie</span></label><label><input type="radio" name="anliegen" value="erbrecht"><span>Erbrecht</span></label><label><input type="radio" name="anliegen" value="arbeit"><span>Arbeit</span></label><label><input type="radio" name="anliegen" value="verkehr"><span>Verkehr</span></label><label><input type="radio" name="anliegen" value="miete"><span>Miete</span></label><label><input type="radio" name="anliegen" value="schaden"><span>Schadensersatz</span></label><label><input type="radio" name="anliegen" value="weitere"><span>Anderes</span></label></div>
+        <span class="gruppe-name">Anwälte</span><div class="chips"><label><input type="radio" name="anliegen" value="familie"><span>Familie</span></label><label><input type="radio" name="anliegen" value="erbrecht"><span>Erbrecht</span></label><label><input type="radio" name="anliegen" value="verkehr"><span>Verkehr</span></label><label><input type="radio" name="anliegen" value="arbeit"><span>Arbeit</span></label><label><input type="radio" name="anliegen" value="miete"><span>Miete</span></label><label><input type="radio" name="anliegen" value="schaden"><span>Schadensersatz</span></label><label><input type="radio" name="anliegen" value="unternehmen"><span>Unternehmen</span></label><label><input type="radio" name="anliegen" value="weitere"><span>Anderes</span></label></div>
         <span class="gruppe-name">Kanzlei</span><div class="chips"><label><input type="radio" name="anliegen" value="bewerbung"><span>Bewerbung</span></label></div>
       </fieldset>
       <div class="zwei">
@@ -301,7 +324,7 @@
   <div class="wrap">
     <div class="fuss-raster">
       <div>
-        <a class="marke" href="index.html">Hewing <i>&amp;</i> Tschirner</a>
+        <a class="marke" href="index.html">Hewing &amp; Tschirner</a>
         <p>Rechtsanwälte und Notarin<br>Gronauer Straße 24, 48607 Ochtrup</p>
       </div>
       <ul>

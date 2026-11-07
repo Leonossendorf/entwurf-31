@@ -7,26 +7,32 @@
 <meta name="description" content="Erklärung zur Barrierefreiheit: unverbindlicher Website-Entwurf für Hewing und Tschirner, Ochtrup.">
 <meta name="robots" content="noindex,nofollow">
 <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
-<link rel="preload" href="fonts/eb-garamond-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/public-sans-var.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="css/site.css">
 <script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
 <a class="skip" href="#inhalt">Zum Inhalt springen</a>
+<div class="kopfband" role="region" aria-label="Erreichbarkeit">
+  <div class="wrap">
+    <p class="ort">Rechtsanwälte und Notarin, Gronauer Straße 24, Ochtrup</p>
+    <p data-offen="nein"><span class="status-punkt" aria-hidden="true"></span><span data-status>Telefon</span> · <a href="tel:+49255372230">02553 72230</a></p>
+  </div>
+</div>
 <header class="kopf">
   <div class="wrap kopf-innen">
-    <a class="marke" href="index.html" aria-label="Hewing und Tschirner, zur Startseite">Hewing <i>&amp;</i> Tschirner</a>
+    <a class="marke" href="index.html" aria-label="Hewing und Tschirner, zur Startseite">Hewing &amp; Tschirner<small>Rechtsanwälte und Notarin</small></a>
     <button type="button" class="menu-knopf" aria-expanded="false" aria-controls="hauptmenue">Menü</button>
     <nav class="nav" id="hauptmenue" aria-label="Hauptmenü">
       <ul>
-        <li><a href="index.html#termin">Notartermin</a></li>
-        <li><a href="index.html#rechtsgebiete">Rechtsgebiete</a></li>
+        <li><a href="index.html#notarin">Notarin</a></li>
+        <li><a href="index.html#anwaelte">Anwälte</a></li>
         <li><a href="index.html#kanzlei">Kanzlei</a></li>
+        <li><a href="index.html#formulare">Formulare</a></li>
         <li><a href="index.html#kontakt">Kontakt</a></li>
       </ul>
     </nav>
-    <a class="kopf-kontakt" href="tel:+49255372230"><strong>02553 72230</strong><span data-status></span></a>
-    <button type="button" class="hilfe-knopf" aria-expanded="false" aria-controls="lesehilfen" aria-label="Barrierefreiheit: Lesehilfen öffnen"><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><circle cx="12" cy="4.2" r="2.1"/><path d="M3.6 7.3c-.5-.1-1 .2-1.1.7s.2 1 .7 1.1c2.2.6 4.3 1 6.2 1.1v3.3L7.6 21c-.1.5.2 1 .7 1.1.5.1 1-.2 1.1-.7l1.8-6.6h1.6l1.8 6.6c.1.5.6.8 1.1.7.5-.1.8-.6.7-1.1l-1.8-7.5v-3.3c1.9-.1 4-.5 6.2-1.1.5-.1.8-.6.7-1.1s-.6-.8-1.1-.7c-5.8 1.6-10.6 1.6-16.8 0z"/></svg><span class="wort klein">Lesehilfen</span></button>
+    <button type="button" class="hilfe-knopf" aria-expanded="false" aria-controls="lesehilfen" aria-label="Barrierefreiheit: Lesehilfen öffnen"><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><circle cx="12" cy="4.2" r="2.1"/><path d="M3.6 7.3c-.5-.1-1 .2-1.1.7s.2 1 .7 1.1c2.2.6 4.3 1 6.2 1.1v3.3L7.6 21c-.1.5.2 1 .7 1.1.5.1 1-.2 1.1-.7l1.8-6.6h1.6l1.8 6.6c.1.5.6.8 1.1.7.5-.1.8-.6.7-1.1l-1.8-7.5v-3.3c1.9-.1 4-.5 6.2-1.1.5-.1.8-.6.7-1.1s-.6-.8-1.1-.7c-5.8 1.6-10.6 1.6-16.8 0z"/></svg><span class="wort">Lesehilfen</span></button>
   </div>
   <div class="hilfe-panel" id="lesehilfen" hidden>
     <h2>Lesehilfen</h2>
@@ -52,13 +58,13 @@
 <p>Die Website ist nach den Richtlinien WCAG 2.2 in der Konformitätsstufe AA entwickelt. An diesem internationalen Standard orientiert sich auch die Umsetzung des Barrierefreiheitsstärkungsgesetzes (BFSG).</p>
 <h2>Was Sie tun können</h2>
 <ul class="punkte">
-<li>Schrift vergrößern, Kontrast und Zeilenabstand einstellen, Links hervorheben, Bewegungen ausschalten und die Seite vorlesen lassen: alles im Zeichen „Lesehilfen“ oben rechts.</li>
+<li>Schrift vergrößern, Kontrast und Zeilenabstand einstellen, Links hervorheben, Bewegungen ausschalten und die Seite vorlesen lassen: alles unter „Lesehilfen“ oben rechts.</li>
 <li>Die Seite vollständig mit der Tastatur bedienen.</li>
 <li>Einen kurzen Text in <a href="leichte-sprache.html">Leichter Sprache</a> lesen.</li>
 </ul>
 <h2>Barriere gefunden?</h2>
 <p>Sagen Sie uns Bescheid, telefonisch unter <a href="tel:+49255372230">02553 72230</a> oder per E-Mail an <a href="mailto:info@anwalt-ochtrup.de">info@anwalt-ochtrup.de</a>.</p>
-<p class="leise klein">Stand: November 2026.</p></div></section><section class="abschnitt kontakt-teil" aria-labelledby="k-h"><div class="wrap eng">
+<p class="leise klein">Stand: November 2026.</p></div></section><section class="abschnitt grau" aria-labelledby="k-h"><div class="wrap eng">
   <form class="formular" data-demo novalidate>
     <h2 class="nur-vorleser" id="k-h">Kontakt</h2>
     <h3>Noch eine Frage?</h3>
@@ -74,7 +80,7 @@
   <div class="wrap">
     <div class="fuss-raster">
       <div>
-        <a class="marke" href="index.html">Hewing <i>&amp;</i> Tschirner</a>
+        <a class="marke" href="index.html">Hewing &amp; Tschirner</a>
         <p>Rechtsanwälte und Notarin<br>Gronauer Straße 24, 48607 Ochtrup</p>
       </div>
       <ul>
