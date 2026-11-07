@@ -1,5 +1,6 @@
 /* Hewing & Tschirner, Entwurf. Schriften liegen lokal, kein Dienst von außen. */
 @font-face{font-family:"Public Sans";src:url(../fonts/public-sans-var.woff2) format("woff2");font-weight:100 900;font-style:normal;font-display:swap}
+@font-face{font-family:"Newsreader";src:url(../fonts/newsreader.woff2) format("woff2");font-weight:200 800;font-style:normal;font-display:swap}
 @font-face{font-family:"Barlow Condensed";src:url(../fonts/barlow-condensed-600.woff2) format("woff2");font-weight:600;font-style:normal;font-display:swap}
 
 :root{
@@ -84,30 +85,23 @@ button,input,textarea,select{font:inherit;color:inherit}
 .knopf .pfeil{transition:transform .25s}
 .knopf:hover .pfeil{transform:translateX(3px)}
 
-/* Erster Bildschirm: Vorlesen vor dem Unterschreiben */
-.start{position:relative;background:var(--umbra);color:#fff;overflow:hidden;padding-top:clamp(2.6rem,6vw,5rem)}
-.start-text{position:relative;z-index:2}
-.start h1{font-size:clamp(2.8rem,6.4vw,5.9rem);line-height:.96;max-width:11.5em;text-wrap:balance}
-.urkunde-rahmen{position:relative;height:clamp(15rem,30vw,22rem);margin-top:clamp(1.8rem,4vw,3rem);overflow:hidden;-webkit-mask-image:linear-gradient(180deg,#000 62%,transparent 100%);mask-image:linear-gradient(180deg,#000 62%,transparent 100%)}
-.urkunde{position:relative;margin-left:clamp(0rem,14vw,14rem);max-width:46rem;background:#fbfaf7;color:#2a2523;padding:2.2rem 2.6rem 3rem;font-size:.95rem;line-height:1.75;transform:rotate(-1.2deg);transform-origin:left top;box-shadow:0 22px 50px rgba(0,0,0,.35)}
-.urkunde p{margin:0;padding:0 .35rem;border-radius:2px}
-.urkunde .k{font-weight:700;margin-top:.6rem}
-.unterschriften{display:grid;grid-template-columns:repeat(3,1fr);gap:1.6rem;margin-top:2.6rem}
-.unterschriften span{display:block;height:2px;background:#2a2523;opacity:.55}
-@keyframes lesen{0%{background:transparent}2%{background:#cfe9df}7.5%{background:#cfe9df}9.5%{background:transparent}100%{background:transparent}}
-.js .urkunde .z{animation:lesen 29.2s linear infinite}
-.urkunde .z:nth-of-type(1){animation-delay:0.0s}
-.urkunde .z:nth-of-type(2){animation-delay:2.2s}
-.urkunde .z:nth-of-type(3){animation-delay:4.4s}
-.urkunde .z:nth-of-type(4){animation-delay:6.6s}
-.urkunde .z:nth-of-type(5){animation-delay:8.8s}
-.urkunde .z:nth-of-type(6){animation-delay:11.0s}
-.urkunde .z:nth-of-type(7){animation-delay:13.2s}
-.urkunde .z:nth-of-type(8){animation-delay:15.4s}
-.urkunde .z:nth-of-type(9){animation-delay:17.6s}
-.urkunde .z:nth-of-type(10){animation-delay:19.8s}
-.urkunde .z:nth-of-type(11){animation-delay:22.0s}
-.start-wege{position:relative;z-index:2;margin-top:-3.6rem;border-top:1px solid rgba(255,255,255,.22);background:var(--umbra)}
+/* Erster Bildschirm: Füller im Lampenlicht (Beispielbild), ein Satz, zwei Wege */
+.start{position:relative;overflow:hidden;background:#0e0a09;color:#fff;isolation:isolate;min-height:max(34rem,calc(100vh - 8.4rem));display:flex;flex-direction:column}
+.start-bild{position:absolute;inset:0;z-index:-1}
+.start-bild img{width:100%;height:100%;object-fit:cover;object-position:46% 60%}
+.start-bild::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(14,10,9,.55) 0%,rgba(14,10,9,.25) 40%,rgba(14,10,9,0) 60%),linear-gradient(0deg,rgba(14,10,9,.6),rgba(14,10,9,0) 28%)}
+.start-text{flex:1;display:flex;flex-direction:column;justify-content:center;width:100%;padding-block:4rem 3rem}
+.start h1{font-family:"Newsreader",Georgia,serif;font-weight:380;font-size:clamp(2.6rem,5.2vw,4.9rem);line-height:1.04;letter-spacing:-.01em;max-width:10.5em;text-wrap:balance}
+.start-satz{font-size:1.12rem;line-height:1.55;color:#efe8e3;max-width:34rem;margin:1.3rem 0 0}
+.beispielbild{position:absolute;right:.9rem;bottom:.6rem;margin:0;font-size:.7rem;color:rgba(255,255,255,.66);z-index:2}
+@media (prefers-reduced-motion:no-preference){
+  .start-bild img{animation:start-bild 2.4s cubic-bezier(.2,.7,.2,1) both}
+  .start h1,.start-satz{animation:start-text .9s cubic-bezier(.2,.7,.2,1) both}
+  .start-satz{animation-delay:.18s}
+}
+@keyframes start-bild{from{transform:scale(1.06);opacity:.4}to{transform:none;opacity:1}}
+@keyframes start-text{from{opacity:0;transform:translateY(.8rem)}to{opacity:1;transform:none}}
+.start-wege{position:relative;z-index:2;border-top:1px solid rgba(255,255,255,.22)}
 .start-wege .wrap{display:grid;grid-template-columns:1fr 1fr}
 .start-wege a{display:block;padding:1.05rem 1.5rem 1.15rem 0;text-decoration:none;font-family:var(--schild);font-weight:600;font-size:1.75rem;line-height:1.1;color:#fff}
 .start-wege a+a{padding-left:1.5rem;border-left:1px solid rgba(255,255,255,.22)}
@@ -288,7 +282,7 @@ legend{font-weight:700;padding:0;margin-bottom:.35rem}
 html.ruhig{scroll-behavior:auto}
 html.ruhig *,html.ruhig *::before,html.ruhig *::after{animation:none!important;transition:none!important}
 html.ruhig [data-zeigen]{opacity:1!important;transform:none!important}
-html.kontrast .urkunde{box-shadow:none;border:2px solid #fff}
+html.kontrast .start-bild::after{background:rgba(0,0,0,.82)}
 
 /* Mittlere Breite */
 @media (max-width:1120px){
@@ -321,10 +315,13 @@ html.kontrast .urkunde{box-shadow:none;border:2px solid #fff}
   .reiter{grid-template-columns:1fr}
   .kopf-innen{gap:.5rem;padding-block:.7rem}
   .hilfe-knopf .wort{display:none}
-  .start h1{font-size:2.65rem}
-  .urkunde-rahmen{height:13.5rem}
-  .urkunde{margin-left:0;padding:1.3rem 1.2rem 2rem;font-size:.8rem;line-height:1.65}
-  .start-wege{margin-top:-2.4rem}
+  .start{min-height:calc(100svh - 7.6rem)}
+  .start-bild img{object-position:50% 100%}
+  .start-bild::after{background:linear-gradient(180deg,rgba(0,0,0,.2) 0%,rgba(0,0,0,0) 45%,rgba(14,10,9,.75) 100%)}
+  .start-text{justify-content:flex-start;padding-top:2.4rem}
+  .start h1{font-size:2.55rem}
+  .start-satz{font-size:1rem}
+  .beispielbild{bottom:auto;top:.5rem}
   .start-wege .wrap{grid-template-columns:1fr}
   .start-wege a{font-size:1.45rem;padding:.8rem 0}
   .start-wege a+a{padding-left:0;border-left:0;border-top:1px solid rgba(255,255,255,.28)}
